@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Besk</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#" 
+          ><img
+            src="/static/logo1.png"
+            height="80px"
+            width="80px"/></a>
+        <h2>BESK</h2>
+      </div>
+
+      <nav class="home-page" id="nav">
+        <a href="#"><b>Home</b></a>
+        <a href="#About"><b>About</b></a>
+        <a href="#book"><b>Books</b></a>
+      </nav>
+      
+      <!--<div class="login">
+        <p><img href="/static/images/user.svg" height="20px" width="20px">{{name}}</p>
+        <a href="/" id="login"></a>
+      </div>
+     <div class="login" style="display:none">
+        <a href="/signup" class="sign-in">sigin-in</a>
+        <a href="/log" id="login">login</a>
+        <a href="#" id="icon" onclick="menu()"><img src="/static/images/menu icon.svg" width="25px" height="25px "></a>
+        
+      </div> -->
+
+      <!-- when logged in user icon and + icon -->
+      <div class="logged" >
+        <a href="#" class="user-icon"
+          ><img src="/static/images/user.svg" height="40px" width="40px" /></a>
+          <a href="/add" class="plus-icon"
+          ><img src="/static/images/plus-solid.svg" height="40px" width="40px"
+        /></a>
+        <a href="/" id="login">signout</a>
+        
+      </div>
+
+      
+
+      
+      </div>
+    </header>
+    <div class="slide-container">
+      <img class="slide" src="/static/images/booksquote1.jpg" style="width: 100%; height:auto;  ">
+      <!-- <img class="slide" src="images/booksquote2.jpeg"style="width: 100%; height:100%;  ">
+      <img class="slide" src="images/booksquote3.png" style="width: 100%; height:100%;  ">
+      <img class="slide" src="images/booksquote4.png" style="width: 100%; height:100%;  ">
+      <img class="slide" src="images/bookquote5.jpg" style="width: 100%; height:100%;  "> -->
+
+      <!-- <button class="left-slide" onclick="nextImg(-1)">&#10094</button>
+      <button class="right-slide" onclick="nextImg(1)">&#10095</button> -->
+ 
+    </div>
+
+    <div id="About">
+      
+      
+      <div class="about">
+        <h1>About</h1>
+        <hr>
+        <h2>BESK</h2>
+        <h2>BOOK EXCHANGE SHARE KNOWLEDGE</h2>
+        <p>In this application you can exchange your books, donate your books.In this way your connecting with people,making friends,sharing knowledge. </p>
+      </div>
+
+    </div>
+
+    <div class="book-container" id="book">
+<!--      <div class="book">-->
+<!--        <h3>Book Name</h3>-->
+<!--        <img src="https://m.media-amazon.com/images/I/51d+PgAtmUL._SY407_BO1,204,203,200_.jpg" height="200px" width="200px">-->
+<!--        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eligendi.</p>-->
+<!--        <p><a>ajaymishra8885@gmail.com</a></p>-->
+          {% for row in rows%}
+                <div class="book">
+<!--                   <h1>{{row["Name"]}}</h1>-->
+                   <h3>{{row["Book_Name"]}}</h3>
+                   <img src={{row["image"]}} alt="img" height="200px" width="200px">
+                   <p>{{row["Description"]}}</p>
+                   <p><img src="/static/images/email.svg" height="15px" width="15px">  {{row["email"]}}</p>
+                </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="icons">
+            <a><img src="/static/images/facebook.svg" height="30px" width="30px"></a>
+            <a><img src="/static/images/instagram.svg" height="30px" width="30px"></a>
+            <a><img src="/static/images/discord.svg" height="30px" width="30px"></a>
+            <a><img src="/static/images/twitter.svg" height="30px" width="30px"></a>
+            <!-- <a><img src="icons/youtube.svg" height="30px" width="30px"></a> -->
+    </div>
+    
+    <div class="links">
+        <a href="#">Privacy Policy  |  </a>
+        <a href="#">Terms of Use  |  </a>
+        <a href="#">CA Supply chain ACt  |  </a>
+        <a href="#">Cookie Preference  |   </a>
+    </div>
+    <br>
+    <footer>
+        <p>© 2022 BESK Company. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

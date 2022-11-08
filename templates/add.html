@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/add.css">
+</head>
+<body>
+    <div class="logo">
+        <a href="#" class="logo"
+          ><img
+            src="/static/images/logo.png"
+        /></a>
+        <h1>BESK</h1>
+        <div class="cancel">
+                <a href="/">
+                <img src="/static/images/x-solid.svg" height="20px" width="20px"/>
+                </a>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="book">
+         <h1 id="lo">Share Your book</h1>
+            <form action="/adding" method="post">
+                <h3>Name</h3>
+                <input type="text" name="name" required>
+                <h3>Book Name</h3>
+                <input type="text" name="book" required>
+                <h3>Description</h3>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                <h3>Image link</h3>
+                <input type="text" name="image" autocomplete="no image" required>
+                <h3>Email</h3>
+                <input type="email" name="email" required><br><br>
+                <input type="submit" value="submit">
+            </form>
+            <br>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+
+{% for row in rows%}
+    <div>
+       <h1>{{row["Name"]}}</h1>
+       <h1>{{row["Book_Name"]}}</h1>
+       <h1>{{row["email"]}}</h1>
+       <h1>{{row["Description"]}}</h1>
+       <img src={{row["image"]}} alt="img" style="width:20px height:20px">
+    </div>
+{% endfor %}
+</div>
+</body>
+</html>
